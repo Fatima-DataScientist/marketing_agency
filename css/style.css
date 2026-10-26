@@ -1,0 +1,830 @@
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+     background: radial-gradient(circle at 80% 20%, #0d1527 0%, #07090e 60%, #020205 100%);
+  background-color: #000000;
+}
+
+/* Full screen dark wrapper to match the image background */
+.pg1 {
+  min-height: 100vh;
+  /* Deep dark gradient mimicking the image background */
+ 
+}
+
+/* Navbar Layout & Transparent Glass Color */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 8%;
+  
+  /* Semi-transparent dark background with a blur filter */
+  background: rgba(7, 9, 14, 0.6); 
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Logo Styling (White text like 'airvon') */
+.nav-logo img{
+    height: 6vh;
+    width: auto;
+}
+
+/* Right Side Container */
+.nav-container {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+/* Navigation Links (Muted white/gray text) */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #94a3b8; /* Muted gray-white */
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
+
+/* Hover and Active states */
+.nav-links a:hover,
+.nav-links a.active {
+  color: #ffffff; /* Turns solid white on hover like the image */
+}
+
+/* "Let's Talk" Button (Matching the blue 'Get in Touch' button) */
+.nav-btn {
+  text-decoration: none;
+  background-color: #F3A625; /* Vibrant dark blue */
+  color: #ffffff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px; /* Fully rounded capsule button */
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.nav-btn:hover {
+  background-color: #ffa200; /* Slightly darker blue on hover */
+  transform: translateY(-1px);
+}
+
+/* Responsive breakpoint */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 20px 5%;
+  }
+  
+  .nav-links {
+    display: none; /* Ready for a mobile menu toggle if needed later */
+  }
+}
+
+
+
+
+/*---Hero Section---*/
+
+/* --- Hero Section Layout --- */
+.hero-section {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: calc(100vh - 20vh); /* Adjust based on navbar height */
+  padding: 5% 8%;
+  overflow: hidden; /* Keeps the glowing sphere inside the screen bounds */
+}
+
+/* --- Left Side Content --- */
+.hero-content {
+  position: relative;
+  z-index: 10;
+  max-width: 65%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main Heading Typography */
+.hero-title {
+  font-size: clamp(2.5rem, 4vw, 4.5rem); /* Responsive font sizing */
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  margin-bottom: 50px;
+}
+
+.hero-title .dot {
+  color: #9333ea; /* Purple dot matching the sphere accent */
+}
+
+/* Secondary Typography Elements */
+.hero-subtitle-top {
+  color: #e2e8f0;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 7%;
+  letter-spacing: 0.5px;
+}
+
+.hero-subtitle-bottom {
+  color: #94a3b8;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+
+
+/* --- Media Queries for Responsiveness --- */
+@media (max-width: 1024px) {
+  .hero-content {
+    max-width: 80%;
+  }
+  .hero-graphic-container {
+    right: -25%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 60px 5%;
+  }
+  
+  .hero-content {
+    max-width: 100%;
+  }
+  
+}
+
+
+
+/*========Our WOrk===========*/
+/* --- Work Section Base --- */
+.work-section {
+  padding: 6% 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+}
+
+.work-header {
+  padding: 0 8%;
+  margin-bottom: 5vh;
+}
+
+.work-title {
+  font-size: clamp(2.5rem, 4vw, 4.5rem);
+  font-weight: 400;
+  color: #ffffff;
+  letter-spacing: -1px;
+}
+
+.work-sub {
+  color: #94a3b8;
+  font-size: 1.1rem;
+  margin-top: 3vh;
+}
+
+/* --- Rigid Containers & Track Gaps --- */
+.scroll-container {
+  width: 100vw;
+  overflow: hidden;
+}
+
+.scroll-track {
+  display: flex;
+  gap: 2vw; /* Space between individual project cards */
+  width: max-content;
+  padding: 0 8%;
+  will-change: transform;
+}
+
+/* --- Card Styles Matching Your Screenshot --- */
+.work-card {
+  position: relative;
+  width: 30vw; /* Exact scale geometry */
+  height: 45vh;
+  border-radius: 24px; /* Premium smooth corners */
+  overflow: hidden;
+  background-color: #111115;
+  cursor: pointer;
+}
+
+.work-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.75;
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.work-card:hover img {
+  transform: scale(1.03);
+}
+
+/* Typography Gradient Overlay Mask */
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  display: flex;
+  align-items: flex-start; /* Keeps the text aligned beautifully near the top left corner */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.6) 100%);
+  z-index: 2;
+}
+
+.card-overlay h3 {
+  color: #ffffff;
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+/* Mobile Scale Adjustments */
+@media (max-width: 768px) {
+  .work-card {
+    width: 320px;
+    height: 210px;
+    border-radius: 16px;
+  }
+  .card-overlay h3 {
+    font-size: 1.25rem;
+  }
+}
+
+/*----What we do---*/
+/* --- What We Do Section Base Layout --- */
+
+.what-we-do-section { 
+     padding: 8% 8%; 
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centered horizontally */
+}
+
+.wwd-container {
+  display: flex;
+  flex-direction: column; /* Stacks label over the paragraph */
+  align-items: center;    /* Centers children horizontally */
+  text-align: center;     /* Centers all typography text */
+  width: 100%;
+  max-width: 1000px;      /* Slightly reduced max-width so the long text block doesn't look stretched wide */
+  gap: 40px;              /* Explicit spacing gap between title and description */
+}
+
+/* Label on top */
+.wwd-label {
+  width: 100%;
+}
+
+.wwd-label span {
+  font-size: 3rem; 
+  font-weight: 500;
+  color: #F3A625; 
+  letter-spacing: -0.5px;
+}
+
+/* Main description block beneath */
+.wwd-content {
+  width: 100%;
+}
+
+.wwd-text {
+  /* Fixed the clamp error: minimum should be smaller than maximum (e.g., clamp(min, preferred, max)) */
+  font-size: clamp(1rem, 2vw, 1.7rem); 
+  font-weight: 400;
+  line-height: 1.5; 
+  color: #ffffff; 
+  letter-spacing: -0.3px;
+  word-break: break-word;
+}
+
+/* --- Responsive Layout for Mobile/Tablets --- */
+@media (max-width: 992px) {
+  .wwd-container {
+    gap: 20px;
+  }
+  
+  .wwd-label span {
+    font-size: 2.5rem; /* Scaled down slightly for mobile screens */
+  }
+  
+  .wwd-text {
+    font-size: 1.4rem; 
+  }
+}
+
+
+
+/*-----------Services section---------*/
+/* --- Interactive Services Section --- */
+.capabilities{
+    
+  font-size: 3rem; 
+  font-weight: 500;
+  color: white; 
+  letter-spacing: -0.5px;
+
+    
+}
+.interactive-services {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.services-pin-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Layer text entries exactly on top of each other */
+.services-text-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  height: 350px; /* Constrains text movement container */
+  text-align: center;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-panel {
+  position: absolute;
+  top:5vh;
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(30px);
+  transition: none; /* Let GSAP handle transitions smoothly */
+}
+
+/* Typography styles matching reference images */
+.service-panel-title {
+  font-size: clamp(1.52rem, 3vw, 2rem);
+  font-weight: 300;
+  color: #ffffff;
+  line-height: 1.2;
+  margin-bottom: 40px;
+  letter-spacing: -0.5px;
+}
+
+.service-panel-desc {
+  font-size: clamp(1rem, 1.3vw, 1.4rem);
+  color: #94a3b8;
+  width: 40vw;
+  margin: 0 auto;
+  margin-top: 30vh;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+/* --- Graphics Elements (Arc Tracker & Diamonds) --- */
+/* --- Graphics Elements (Arc Tracker & Diamonds) --- */
+.services-graphics-wrapper {
+  position: absolute;
+  bottom: 0;
+  width: 82%;
+  max-width: 1200px;
+  height: 550px;
+  pointer-events: none;
+}
+
+.slider-arc-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+/* Position nodes relative to the SVG space */
+.arc-node {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* Use strict square pixel bounding boxes so the center is easy to balance */
+  width: 16px;
+  height: 16px;
+  /* Offset by exactly half the width and height to lock them onto the curve path */
+  margin-left: 6px; 
+  margin-top: -30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 15;
+}
+
+.diamond-shape {
+  width: 12px;
+  height: 12px;
+  background-color: #ffffff;
+  transform: rotate(45deg);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.3s ease;
+}
+
+/* Visual cue for active target point items */
+.arc-node.active-node .diamond-shape {
+  transform: rotate(45deg) scale(1.4);
+  background-color: #F3A625; /* Orange accent color */
+}
+
+
+
+
+/* ================= Stats Counter Section ================= */
+.stats-section {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Ambient glow orb on the bottom-left to match screen layout profile */
+
+.stats-container {
+  position: relative;
+  max-width: 800px;
+  margin: 10% auto;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8vh;
+}
+
+/* Narrative content matching reference image presentation styles */
+.stats-text-header {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.stats-lead-text {
+  font-size: clamp(1.3rem, 2.1vw, 2.2rem);
+  color: #ffffff;
+  font-weight: 300;
+  line-height: 1.4;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.stats-sub-text {
+  font-size: clamp(1.1rem, 1.6vw, 1.8rem);
+  color: #94a3b8;
+  font-weight: 300;
+  line-height: 1.4;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Responsive Grid Display Systems */
+.stats-counter-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 4vh;
+  width: 100%;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Left aligned values */
+}
+
+.stat-number-wrapper {
+  font-size: clamp(4rem, 8vw, 8.5rem);
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 1;
+  letter-spacing: -2px;
+  display: flex;
+  align-items: center;
+}
+
+.stat-suffix {
+  color: #ffffff;
+}
+
+.stat-label {
+  font-size: clamp(1rem, 1.3vw, 1.4rem);
+  color: #94a3b8;
+  margin-top: 15px;
+  font-weight: 400;
+}
+
+/* Responsive Scalings */
+@media (max-width: 768px) {
+  .stats-counter-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  .stat-item {
+    align-items: center; /* Center everything gracefully on small devices */
+  }
+}
+
+
+
+
+
+
+
+/* ================= Client Ticker Section ================= */
+.ticker-section {
+  position: relative;
+  width: 100%;
+  padding: 60px 0;
+  overflow: hidden;
+  border-top: 1px solid rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+/* Background gradient texture glow matching the purple/gold ambient asset style */
+.ticker-ambient-glow {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 40vw;
+  height: 100%;
+  background: radial-gradient(circle at 0% 50%, rgba(147, 51, 234, 0.12) 0%, rgba(243, 166, 37, 0.04) 50%, rgba(0,0,0,0) 100%);
+  filter: blur(40px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.ticker-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  z-index: 2;
+  display: flex;
+}
+
+.ticker-track {
+  display: flex;
+  gap: 80px; /* Space between logo elements */
+  width: max-content;
+  white-space: nowrap;
+  will-change: transform;
+}
+
+/* Branding Item Typography Styles */
+.ticker-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: #ffffff;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: clamp(1.5rem, 2.2vw, 2.5rem);
+  font-weight: 500;
+  letter-spacing: -0.5px;
+  opacity: 0.85;
+}
+
+/* --- Inline Minimal SVG/CSS Mock Icons --- */
+.icon-shape {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.block-diamond {
+  width: 20px;
+  height: 20px;
+  border: 3px solid #ffffff;
+  transform: rotate(45deg);
+}
+
+.block-capsule {
+  width: 28px;
+  height: 16px;
+  border: 3px solid #ffffff;
+  border-radius: 8px;
+}
+
+.block-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: #020205;
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+.block-v {
+  width: 24px;
+  height: 24px;
+  background: linear-gradient(45deg, transparent 40%, #ffffff 40%, #ffffff 60%, transparent 60%),
+              linear-gradient(-45deg, transparent 40%, #ffffff 40%, #ffffff 60%, transparent 60%);
+  position: relative;
+}
+
+
+/* ================= Testimonials Review Section ================= */
+.testimonials-section {
+  position: relative;
+  width: 100%;
+  padding: 8% 8%;
+  background-color: #020205; /* Solid dark canvas base wrapper */
+  overflow: hidden;
+}
+
+/* Background ambient deep workspace lightning */
+.testimonials-bg-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70vw;
+  height: 50vh;
+  background: radial-gradient(circle, rgba(147, 51, 234, 0.08) 0%, rgba(0, 0, 0, 0) 70%);
+  filter: blur(60px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.testimonials-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+.testimonials-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.testimonials-title {
+  font-size: clamp(2rem, 3.5vw, 3.5rem);
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.testimonials-subtitle {
+  font-size: clamp(1rem, 1.4vw, 1.4rem);
+  color: #94a3b8;
+  font-weight: 300;
+}
+
+/* 3-Column Testimonial Layout Track Grid */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  align-items: center;
+}
+
+/* --- Frosted Ultra-Transparent Glass Card Base --- */
+.testimonial-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.03); /* Minimal alpha surface opacity overlay */
+  border: 1px solid rgba(255, 255, 255, 0.06); /* Subtle highlight structure border line */
+  border-radius: 15px;
+  padding: 40px;
+  backdrop-filter: blur(16px); /* High fidelity modern glass morphic hardware blur effect */
+  -webkit-backdrop-filter: blur(16px);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  transition: border-color 0.4s ease, transform 0.4s ease;
+  will-change: transform;
+}
+
+.testimonial-card:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-4px);
+}
+
+/* Dynamic featured scaling offset framework */
+.testimonial-card.featured-card {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.09);
+  padding: 50px 40px; /* Gives the middle card a prominent height boost */
+}
+
+.brand-logo img {
+  height: 28px;
+  width: auto;
+  opacity: 0.9;
+  filter: brightness(0) invert(1); /* Forces standard brand vectors into clear clean white */
+}
+
+.quote-icon {
+  font-size: 4rem;
+  font-family: serif;
+  line-height: 0.1;
+  color: rgba(255, 255, 255, 0.2);
+  margin-bottom: -10px;
+}
+
+.testimonial-text {
+  font-size: 1.05rem;
+  color: #e2e8f0;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+/* User identity signature layout block */
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: auto; /* Pushes profile block perfectly to bottom edge */
+}
+
+.user-profile img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.user-info h4 {
+  font-size: 1.1rem;
+  color: #ffffff;
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+
+.user-info p {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  font-weight: 400;
+}
+
+/* Tablet & Mobile Layout Shifts */
+@media (max-width: 1024px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .testimonial-card.featured-card {
+    padding: 40px; /* Standardize paddings back down during columns stacking sequential flow */
+  }
+}
+
+
+/* Lock testimonial grid to equal row height — middle card taller via padding only */
+.testimonials-grid {
+  align-items: stretch;
+}
+
+.testimonial-card {
+  height: auto;
+  min-height: 320px;
+  will-change: transform, opacity;
+}
+
+.testimonial-card.featured-card {
+  min-height: 360px; /* slightly taller than the two side cards */
+}
+
+
+

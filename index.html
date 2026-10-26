@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Develpify</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/MotionPathPlugin.min.js"></script>
+</head>
+<body>
+    
+    <section class="pg1">
+        <nav class="navbar">
+        <!-- Logo on the left -->
+        <div class="nav-logo">
+            <img src="assets/logo.png" alt="">
+        </div>
+
+        <!-- Links and Button on the right -->
+        <div class="nav-container">
+            <ul class="nav-links">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+            </ul>
+            <a href="#" class="nav-btn">Let's Talk</a>
+        </div>
+        </nav>
+        <header class="hero-section">
+        <div class="hero-content">
+        <h1 class="hero-title">Let's Tell Your Brand<br>Story Through Experience<span class="dot">.</span></h1>
+        
+        <p class="hero-subtitle-bottom">
+            A Pakistan-based design and strategy studio<br>
+            creating compelling visual stories that resonate.
+        </p>
+           <p class="hero-subtitle-top">Contact For Quick Response</p>
+        </div>
+    </header>
+</section>
+
+
+
+<!------Our Work ------>
+<section class="work-section">
+  <div class="work-header">
+    <h2 class="work-title">Selected Work</h2>
+    <p class="work-sub">— Our Portfolio of Success</p>
+  </div>
+
+  <div class="scroll-container">
+    <div class="scroll-track track-right">
+      <div class="work-card">
+        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=500&q=80" alt="Hbs Parking Solutions">
+        <div class="card-overlay"><h3>Hbs Parking Solutions</h3></div>
+      </div>
+      <div class="work-card">
+        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=500&q=80" alt="Real Estate Web Application">
+        <div class="card-overlay"><h3>Real Estate Web Application</h3></div>
+      </div>
+      <div class="work-card">
+        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=500&q=80" alt="Volunteer Management System">
+        <div class="card-overlay"><h3>Volunteer Management System</h3></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-container">
+    <div class="scroll-track track-left">
+      <div class="work-card">
+        <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=500&q=80" alt="E-Commerce Interface">
+        <div class="card-overlay"><h3>E-Commerce Interface</h3></div>
+      </div>
+      <div class="work-card">
+        <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=500&q=80" alt="SaaS Dashboard Design">
+        <div class="card-overlay"><h3>SaaS Dashboard Design</h3></div>
+      </div>
+      <div class="work-card">
+        <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&w=500&q=80" alt="Mobile App Development">
+        <div class="card-overlay"><h3>Mobile App Development</h3></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-----What we do----->
+<section class="what-we-do-section">
+  <div class="wwd-container">
+    <div class="wwd-label">
+      <span>What We Do</span>
+    </div>
+    
+    <div class="wwd-content">
+      <p class="wwd-text">
+        Our development expertise empowers us to build robust web applications and dynamic mobile solutions, using innovative coding techniques to ensure seamless user experiences and effective brand connections.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!----Services section---->
+
+<section class="interactive-services">
+  <div class="services-pin-container">
+    
+    <div class="capabilities">Our Capabilities</div>
+    
+    <div class="bg-grid-lines"></div>
+
+    <div class="services-text-wrapper">
+      <div class="service-panel active-panel" data-index="0">
+        <h2 class="service-panel-title">Websites and<br>platforms</h2>
+        <p class="service-panel-desc">
+          In our team, developers work alongside designers. This is crucial in creating a fast and responsive website that would excite the audience.
+        </p>
+      </div>
+
+      <div class="service-panel" data-index="1">
+        <h2 class="service-panel-title">Mobile applications</h2>
+        <p class="service-panel-desc">
+          Every mobile app involves stages of target audience research and prototype testing. The result? A product that's perfectly suited to your users.
+        </p>
+      </div>
+
+      <div class="service-panel" data-index="2">
+        <h2 class="service-panel-title">E-Commerce &<br>Systems</h2>
+        <p class="service-panel-desc">
+          Tailored digital storefronts built around advanced system architectures to maximize operational scale and user retention metrics seamlessly.
+        </p>
+      </div>
+    </div>
+
+    <div class="services-graphics-wrapper">
+      <svg class="slider-arc-svg" viewBox="0 0 1000 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path id="arc-path" d="M 100,550 A 450,450 0 0,1 900,550" stroke="rgba(255,255,255,0.15)" stroke-width="2"/>
+        <path id="arc-progress" d="M 100,550 A 450,450 0 0,1 900,550" stroke="rgba(255,255,255,0.7)" stroke-width="2"/>
+      </svg>
+      
+      <div class="arc-node" id="node-0"><div class="diamond-shape"></div></div>
+      <div class="arc-node" id="node-1"><div class="diamond-shape"></div></div>
+      <div class="arc-node" id="node-2"><div class="diamond-shape"></div></div>
+    </div>
+
+  </div>
+</section>
+
+
+
+<section class="stats-section">
+
+  <div class="stats-container">
+    <div class="stats-text-header">
+      <p class="stats-lead-text">
+        Stay ahead of the curve with our expert guidance, and invest in development that grows with your business and enhances user engagement!
+      </p>
+      <p class="stats-sub-text">
+        Partner with us for a comprehensive consultation that transforms your digital landscape and helps your business thrive!
+      </p>
+    </div>
+
+      <div class="stats-counter-grid">
+      <div class="stat-item">
+        <div class="stat-number-wrapper">
+          <span class="counter-digit" data-target="70">0</span><span class="stat-suffix">+</span>
+        </div>
+        <p class="stat-label">Satisfied Clients</p>
+      </div>
+
+      <div class="stat-item">
+        <div class="stat-number-wrapper">
+          <span class="counter-digit" data-target="40">0</span><span class="stat-suffix">%</span>
+        </div>
+        <p class="stat-label">Client Referrals</p>
+      </div>
+
+      <div class="stat-item">
+        <div class="stat-number-wrapper">
+          <span class="counter-digit" data-target="5">0</span><span class="stat-suffix">+</span>
+        </div>
+        <p class="stat-label">Award Recognitions</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="ticker-section">
+  <div class="ticker-ambient-glow"></div>
+  
+  <div class="ticker-container">
+    <div class="ticker-track" id="brand MarqueeTrack">
+      <div class="ticker-item"><span>Coiffuré</span></div>
+      <div class="ticker-item">
+        <div class="icon-shape block-diamond"></div>
+        <span>Tecnologia</span>
+      </div>
+      <div class="ticker-item">
+        <div class="icon-shape block-capsule"></div>
+        <span>FABRIK</span>
+      </div>
+      <div class="ticker-item">
+        <div class="icon-shape block-circle"><span>N</span></div>
+        <span>NUMÉRIQUE</span>
+      </div>
+      <div class="ticker-item">
+        <div class="icon-shape block-v"></div>
+        <span>MACCHINA</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="testimonials-section">
+  <div class="testimonials-bg-glow"></div>
+
+  <div class="testimonials-container">
+    <div class="testimonials-header">
+      <h2 class="testimonials-title">Reviews</h2>
+      <p class="testimonials-subtitle">We are very happy because we have happy customers.</p>
+    </div>
+
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="brand-logo">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/Walmart_logo.svg" alt="Walmart">
+        </div>
+        <span class="quote-icon">“</span>
+        <p class="testimonial-text">
+        
+						Develpify transformed ideas into an immersive digital experience,
+             balancing aesthetics and usability with remarkable precision.					 
+        </p>
+        <div class="user-profile">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Nikhil Anantraman">
+          <div class="user-info">
+            <h4>Nikhil Anantraman</h4>
+            <p>Senior Designer at HomeLone</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card featured-card">
+        <div class="brand-logo">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/Walmart_logo.svg" alt="Walmart">
+        </div>
+        <span class="quote-icon">“</span>
+        <p class="testimonial-text">
+          
+						From concept to execution, PixelPier demonstrated a level of expertise that is truly commendable. 
+            They were responsive, flexible, and delivered a design that truly speaks to our target audience. The team's turned our vision into a reality, and we couldn't be happier.					          
+        </p>
+        <div class="user-profile">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Nikhil Anantraman">
+          <div class="user-info">
+            <h4>Nikhil Anantraman</h4>
+            <p>Senior Designer at HomeLone</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="brand-logo">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/Walmart_logo.svg" alt="Walmart">
+        </div>
+        <span class="quote-icon">“</span>
+        <p class="testimonial-text">
+        
+						Working with PixelPier was an absolute pleasure.
+             Their attention to detail and creative flair truly set them apart.
+              They took our vision and turned it into something beyond our expectations.					 
+        </p>
+        <div class="user-profile">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80" alt="Nikhil Anantraman">
+          <div class="user-info">
+            <h4>Nikhil Anantraman</h4>
+            <p>Senior Designer at HomeLone</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script src="js/script.js"></script>
+</body>
+</html>
